@@ -1,0 +1,146 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+
+header {
+  padding: 154px 0 100px;
+}
+
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+section {
+  padding: 150px 0;
+}
+
+.css-logo img{
+	width:70%;
+	height:70%;
+        display:block;
+        margin:auto;
+}
+
+body{
+	font-family: 'Nanum Gothic Coding', monospace;
+	color:#6a6a6a;
+	font-size:15px;
+}
+
+h1{
+	font-family: 'Goudy Bookletter 1911', serif;
+}
+
+h2{
+	font-family: 'Song Myung', serif;
+}
+
+
+h1, h2, h1 a, h2 a{
+	color:#333333;
+}
+
+h1, .h1{
+	font-size:50px;
+}
+
+h2, .h2{
+	font-size:40px;
+}
+
+.banner-text{
+	display:inline-block;
+	font-family:'Song Myung', serif;
+	margin: auto;
+	margin-top:30px;
+	margin-bottom:30px;
+	text-align: center;
+        vertical-align: middle;
+}
+
+.banner-text.small{
+	padding:2px 30px;
+}
+
+.banner-text.medium{
+	padding:2px 50px;
+}
+
+.banner-text.large{
+	padding:2px 70px;
+}
+
+.banner-text.full{
+	width:100%;
+}
+
+.banner-text.light{
+	color:#FFF;
+	border-top:medium double #fff;
+	border-bottom:medium double #fff;
+}
+
+.banner-text.light *{
+	color:#FFF;
+}
+
+.banner-text.dark{
+	color:#333333;
+	border-top:medium dashed #000000;
+	border-bottom:medium dashed #000000;
+}
+
+.banner-text.dark *{
+	color:#333333;
+}
+
+.slide-image {
+	position:relative;
+	height:inherit;
+	width:100%;
+	background-size:cover;
+	background-position:50% 50%;
+	background-color:#FFF;
+	-webkit-transform: translateZ(0);
+
+}
+
+
+.banner-date{
+	font-family: 'Nanum Gothic Coding', monospace;
+        color: #333333;
+	letter-spacing:3px;
+	font-size:30px;
+}
+
+.album {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  height: 33.333%
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+  width: 100%;
+  height:inherit;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+
