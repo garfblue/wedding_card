@@ -16,7 +16,8 @@ header {
 }
 
 section {
-  padding: 150px 0;
+  padding-top: 10%;
+  padding-bottom: 30%;
 }
 
 .css-logo img{
@@ -104,7 +105,7 @@ h2, .h2{
 	height:inherit;
 	width:100%;
 	background-size:cover;
-	background-position:50% 50%;
+	background-position0% 50%;
 	background-color:#FFF;
 	-webkit-transform: translateZ(0);
 
@@ -119,8 +120,8 @@ h2, .h2{
 }
 
 .album {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 10%;
+  padding-bottom: 30%;
   background-color: #f7f7f7;
 }
 
