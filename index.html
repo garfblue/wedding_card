@@ -408,7 +408,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
           function errorCallbackT(error) { alert("Error: " + error.message); } document.getElementById("getLocationT").onclick = function () { navigator.geolocation.getCurrentPosition(successCallbackT, errorCallbackT); };
 
         </script> 
-      <button id="getLocationK">바로 내비게이션!(카카오내비)</button>
+      <button id="getLocationK" onclick="navi();">바로 내비게이션!(카카오내비)</button>
         <script>
           Kakao.init('147f86139273df9a3d4a489f3d06892c');
     // 카카오 로그인 버튼을 생성합니다.
