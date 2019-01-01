@@ -11,8 +11,8 @@
     <title>HANDEE X DIDYMUS WEDDING CARD</title>
 
     <!--Bootstrap-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
+    <!--link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
@@ -26,6 +26,36 @@
   </head>
 
   <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+           <div class="css-logo">
+               <img src="images/main_icon.svg">
+           </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#thanks">감사의말</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#gallary">사진모음</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#path">오시는길</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">남기실말</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <header class="slider-image" style="background-image:url(./images/title_2.jpg); background-position:top center">
         <div class="container text-center" >   
@@ -66,45 +96,69 @@
           </div>
         </div>
         <div class="row">
-          <a href="#myGallery" data-slide-to="0"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image0.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div></a>
-
-          <a href="#myGallery" data-slide-to="1"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image1.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div></a>
-          <a href="#myGallery" data-slide-to="2"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image2.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div></a>
-
-          <a href="#myGallery" data-slide-to="3"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image3.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div></a>
-          <a href="#myGallery" data-slide-to="4"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image4.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="0">
+            <img class="card-img-top" src="./images/image0.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">결혼식 예복을 입고 찍어 본 사진. 눈 둘데 없는 하스터가 인상적이다.</p>
+            </div></a>
           </div>
-          <a href="#myGallery" data-slide-to="5"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image5.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div></a>
 
-          <a href="#myGallery" data-slide-to="6"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image6.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div></a>
-          <a href="#myGallery" data-slide-to="7"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image7.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div></a>
-          <a href="#myGallery" data-slide-to="8"><div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button">
-            <img src="./images/image8.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div></a>
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="1">
+            <img class="card-img-top" src="./images/image1.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">2017년 5월, 오사카 유니버셜 스튜디오에서 촬영. 배경은 전혀 놀이공원 같지 않다.</p>
+            </div></a>
+          </div>
+           
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="2">
+            <img class="card-img-top" src="./images/image2.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">우리의 반려견 하스터. 취미는 뭐든지 물고 도망가기!</p>
+            </div></a>
+          </div>
+
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="3">
+            <img class="card-img-top" src="./images/image3.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">언젠가 민속촌에 갔을 때. 카메라의 스마트폰 연동 촬영 테스트 중.</p>
+            </div></a>
+          </div>
+
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="4">
+            <img class="card-img-top" src="./images/image4.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">사실 우리는 호그와트 졸업생이었던 것이다! 하스터를 마법 동물로 만들자!</p>
+            </div></a>
+          </div>
+
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="5">
+            <img class="card-img-top" src="./images/image5.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">모교 방문....?! 사실은 오사카 유니버셜 스튜디오이다.</p>
+            </div></a>
+          </div>
+
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="6">
+            <img class="card-img-top" src="./images/image6.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">한때 경제개발과 인간승리의 상징이었던 군산 새만금에서.</p>
+            </div></a>
+          </div>
+
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="7">
+            <img class="card-img-top" src="./images/image7.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">내추럴한 컨셉으로 찰칵. 하스터 표정좀 풀지?</p>
+            </div></a>
+          </div>
+
+          <div class="card" data-toggle="modal" data-target="#myModal" data-local="#myCarousel" type="button"><a href="#myGallery" data-slide-to="8">
+            <img class="card-img-top" src="./images/image8.jpg" alt="Card image cap">
+            <div class="card-body">
+            <p class="card-text">멋진 전경. 정말 유럽이면 좋겠지만 역시 오사카 유니버셜 스튜디오다.</p>
+            </div></a>
+          </div>
+
         </div>
         </div>
       </div>
@@ -419,71 +473,53 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
-<div class="pull-left">My Gallery Title</div>
+<div class="pull-left">사진모음</div>
 <button type="button" class="close" data-dismiss="modal" title="Close"> <span class="glyphicon glyphicon-remove"></span></button>
 </div>
 <div class="modal-body">
 
 <!--begin carousel-->
-<div id="myGallery" class="carousel slide" data-interval="false">
+<div id="myGallery" class="carousel slide" data-interval="false" data-ride="carousel">
 <div class="carousel-inner">
-<div class="item active"> <img src="./images/image0.jpg" alt="item0">
+<div class="carousel-item active"> <img src="./images/image0.jpg" style="width: 100%;height: auto;" alt="item0">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 0  description.</p>
 </div>
 </div>
-<div class="item"> <img src="./images/image1.jpg" alt="item1">
+<div class="carousel-item"> <img src="./images/image1.jpg" style="width: 100%;height: auto;" alt="item1">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 1 description.</p>
 </div>
 </div>
-<div class="item"> <img src="./images/image2.jpg" alt="item2">
+<div class="carousel-item"> <img src="./images/image2.jpg" style="width: 100%;height: auto;" alt="item2">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 2  description.</p>
 </div>
 </div>
-<div class="item"> <img src="./images/image3.jpg" alt="item3">
+<div class="carousel-item"> <img src="./images/image3.jpg" style="width: 100%;height: auto;" alt="item3">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 3 description.</p>
 </div>
 </div>
-<div class="item"> <img src="./images/image4.jpg" alt="item4">
+<div class="carousel-item"> <img src="./images/image4.jpg" style="width: 100%;height: auto;" alt="item4">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 4 description.</p>
 </div>
 </div>
-<div class="item"> <img src="./images/image5.jpg" alt="item5">
+<div class="carousel-item"> <img src="./images/image5.jpg" style="width: 100%;height: auto;" alt="item5">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 5 description.</p>
 </div>
 </div>
-<div class="item"> <img src="./images/image6.jpg" alt="item6">
+<div class="carousel-item"> <img src="./images/image6.jpg" style="width: 100%;height: auto;" alt="item6">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 5 description.</p>
 </div>
 </div>
-<div class="item"> <img src="./images/image7.jpg" alt="item7">
+<div class="carousel-item"> <img src="./images/image7.jpg" style="width: 100%;height: auto;" alt="item7">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 5 description.</p>
 </div>
 </div>
-<div class="item"> <img src="./images/image8.jpg" alt="item8">
+<div class="carousel-item"> <img src="./images/image8.jpg" style="width: 100%;height: auto;" alt="item8">
 <div class="carousel-caption">
-<h3>Heading 3</h3>
-<p>Slide 5 description.</p>
 </div>
 </div>
 <!--end carousel-inner--></div>
 <!--Begin Previous and Next buttons-->
-<a class="left carousel-control" href="#myGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+<a class="carousel-control-prev" href="#myGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="carousel-control-next" href="#myGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
 <!--end carousel--></div>
 
 <!--end modal-body--></div>
@@ -506,14 +542,18 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
     </footer>
 
     <!--Latest stable release of jQuery Core Library-->
-    <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script> 
+    <!--script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script> 
 
     <!--Bootstrap JS-->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-    </script>
+    <!--script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"-->
+    <!--/script-->
+    <!-- Plugin JavaScript -->
+    <!--script src="vendor/jquery-easing/jquery.easing.min.js"></script-->
 
     <!-- Custom JavaScript for this theme -->
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="js/scrolling-nav.js"></script>
 
 

@@ -124,18 +124,18 @@ h2, .h2{
 .card {
   float: left;
   width: 33%;
-  height: 33%;
-  padding: .75rem;
-  margin-bottom: 2rem;
+  height: auto;
+  /*padding: .75rem;*/
+  /*margin-bottom: 2rem;*/
   border: 0;
   overflow: hidden;
+  
 }
 
 .card > img {
-  margin-bottom: .75rem;
-  width: auto;
-  height: 30vw;
-  
+  /*margin-bottom: .75rem*/;
+  width: 30vw;
+  height: auto;
 
 }
 
