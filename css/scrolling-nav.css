@@ -124,7 +124,7 @@ h2, .h2{
 .card {
   float: left;
   width: 33%;
-  height: auto;
+  height: 33%;
   /*padding: .75rem;*/
   /*margin-bottom: 2rem;*/
   border: 0;
