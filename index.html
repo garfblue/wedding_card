@@ -407,6 +407,80 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
           function errorCallbackT(error) { alert("Error: " + error.message); } document.getElementById("getLocationT").onclick = function () { navigator.geolocation.getCurrentPosition(successCallbackT, errorCallbackT); };
 
         </script> 
+      <button id="getLocationK">바로 내비게이션!(카카오내비)</button>
+        <script>
+          function successCallbackK(position) { 
+             let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+             //alert("Your current position is: latitude(" + pos.lat + "), longitude(" + pos.lng + ")"); 
+            // var schemeUrl = "tmap://?rGoName=서울메트로웨딩&rGoX=37.561808&rGoY=127.056695";
+             var schemeUrl = "kakaonavi://search?name=서울메트로웨딩";
+        var redirectUrl = 'http://www.kakao.com/';
+
+        //alert(schemeUrl); 
+             
+
+        var currentOS = "else";
+
+    //alert(navigator.userAgent.toLowerCase());
+
+    var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+
+    //alert(mobile);
+    if (mobile) {
+
+
+        var userAgent = navigator.userAgent.toLowerCase();
+
+
+        if (userAgent.search("android") > -1)
+
+
+            currentOS = "android";
+
+
+        else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1))
+
+
+            currentOS = "ios";
+
+
+        else
+
+
+            currentOS = "else";
+
+
+    }
+    else {
+      window.open("https://map.naver.com/?sm=clk&query=서울특별시 성동구 천호대로78길 15-48", "_blank");
+    }
+
+
+    if(currentOS == "android"){
+
+
+        // Android
+
+
+        //window.open("intent://www.naver.com#Intent;scheme=http;package=com.android.chrome;end");
+      location.href = schemeUrl;
+
+
+    }else if(currentOS == "ios"){
+
+
+        // IOS 
+
+
+        //window.open(schemeUrl);
+        location.href = schemeUrl;
+
+
+    }
+          };
+          function errorCallbackK(error) { alert("Error: " + error.message); } document.getElementById("getLocationT").onclick = function () { navigator.geolocation.getCurrentPosition(successCallbackK, errorCallbackK); };
+
+        </script> 
       </div>
     </section>
 
