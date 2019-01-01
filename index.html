@@ -234,7 +234,12 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
             if (parseFloat(navigator.userAgent.match(/WebKit\/[^\ ]*/)[0].toLowerCase().substr(7)) > 537.22){
                 var openWindow = window.open('./openWindow.html#' + schemeUrl);
  
-            } else {
+            } else if (navigator.userAgent.match(/iphone|ipad\/[^\ ]*/)) {
+             
+              window.location.href = schemeUrl;
+
+            }
+             else {
                 $('<iframe></iframe>', {
                     src: schemeUrl,
                     width: 0,
