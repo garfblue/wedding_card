@@ -186,7 +186,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 });    
 </script>
         </div>
-        <button id="getLocation">바로 길찾기!</button>
+        <button id="getLocation">바로 길찾기!(카카오맵)</button>
         <script>
           function successCallback(position) { 
              let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
@@ -199,11 +199,11 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 
         var currentOS = "else";
 
-    alert(navigator.userAgent.toLowerCase());
+    //alert(navigator.userAgent.toLowerCase());
 
     var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
 
-    alert(mobile);
+    //alert(mobile);
     if (mobile) {
 
 
@@ -259,7 +259,79 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
           function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocation").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); };
 
         </script>
-        
+              <button id="getLocation">바로 길찾기!(네이버맵)</button>
+        <script>
+          function successCallback(position) { 
+             let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+             //alert("Your current position is: latitude(" + pos.lat + "), longitude(" + pos.lng + ")"); 
+             var schemeUrl = "nmap://route/public?option=24&slat=" +pos.lat+ "&slng="+pos.lng+"&dlat=37.561808&dlng=127.056695&dname=서울메트로웨딩&appname=handeeanddidymuswedding.ml";
+        var redirectUrl = 'http://www.kakao.com/';
+
+        //alert(schemeUrl); 
+             
+
+        var currentOS = "else";
+
+    //alert(navigator.userAgent.toLowerCase());
+
+    var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+
+    //alert(mobile);
+    if (mobile) {
+
+
+        var userAgent = navigator.userAgent.toLowerCase();
+
+
+        if (userAgent.search("android") > -1)
+
+
+            currentOS = "android";
+
+
+        else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1))
+
+
+            currentOS = "ios";
+
+
+        else
+
+
+            currentOS = "else";
+
+
+    }
+    else {
+      window.open("http://map.daum.net/link/to/서울메트로웨딩,37.561808,127.056695", "_blank");
+    }
+
+
+    if(currentOS == "android"){
+
+
+        // Android
+
+
+        //window.open("intent://www.naver.com#Intent;scheme=http;package=com.android.chrome;end");
+      location.href = schemeUrl;
+
+
+    }else if(currentOS == "ios"){
+
+
+        // IOS 
+
+
+        //window.open(schemeUrl);
+        location.href = schemeUrl;
+
+
+    }
+          };
+          function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocation").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); };
+
+        </script>  
       </div>
     </section>
 
