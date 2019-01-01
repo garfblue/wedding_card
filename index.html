@@ -194,7 +194,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
              var schemeUrl = "daummaps://route?sp="+pos.lat+","+pos.lng+"&ep=37.561808,127.056695by=PUBLICTRANSIT";
         var redirectUrl = 'http://www.kakao.com/';
 
-        runApp();
+        setTimeout(runApp, 700);
  
         window.closeWindow = (function(){
             var isWindowRef = null;
