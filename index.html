@@ -201,7 +201,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 
     alert(navigator.userAgent.toLowerCase());
 
-    var mobile = (/macintosh|iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+    var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
 
     alert(mobile);
     if (mobile) {
@@ -216,7 +216,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
             currentOS = "android";
 
 
-        else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)|| (userAgent.search("macintosh") > -1))
+        else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1))
 
 
             currentOS = "ios";
@@ -229,6 +229,9 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 
 
     }
+    else {
+      window.open("http://map.daum.net/link/to/서울메트로웨딩,37.561808,127.056695", "_blank");
+    }
 
 
     if(currentOS == "android"){
@@ -237,7 +240,8 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
         // Android
 
 
-        window.open("intent://www.naver.com#Intent;scheme=http;package=com.android.chrome;end");
+        //window.open("intent://www.naver.com#Intent;scheme=http;package=com.android.chrome;end");
+      location.href = schemeUrl;
 
 
     }else if(currentOS == "ios"){
