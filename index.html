@@ -191,24 +191,62 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
           function successCallback(position) { 
              let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
              alert("Your current position is: latitude(" + pos.lat + "), longitude(" + pos.lng + ")"); 
-             //window.open("http://map.daum.net/link/to/서울메트로웨딩,37.561808,127.056695", "_blank");
-
-             var userAgent = navigator.userAgent;
-             var visitedAt = (new Date()).getTime();
-             location.href="daummaps://open"
-             if(userAgent.match(/iPhone|iPad|iPod/)){
-               setTimeout(
-                 function(){
-                   if((new Date()).getTime() - visitedAt < 2000){
-                     location.href="daummaps://route?sp="+pos.lat+","+pos.lng+"&ep=37.561808,127.056695by=PUBLICTRANSIT";
-                   }
-                 }, 500);
-
-               setTimeout(function(){
-                 location.href="daummaps://open";
-               }, 0);
-             }
-
+             var schemeUrl = 'daummaps://route?sp="+pos.lat+","+pos.lng+"&ep=37.561808,127.056695by=PUBLICTRANSIT"';
+        var redirectUrl = 'http://www.kakao.com/';
+ 
+        window.closeWindow = (function(){
+            var isWindowRef = null;
+            setInterval(function() {
+                // 새로열린 창이 닫혔을 때 다시 버튼 클릭 시 동작이 실행이 되어야 하므로 해당 객체를 삭제
+                isWindowRef = (isWindowRef && isWindowRef.window) ? isWindowRef : null;
+            }, 1000);
+ 
+            return function (windowRef, time) {
+                //  새로열린 Window에서 백버튼 누를 시 해당 함수가 계속 호출되는 무한루프 방지
+                if (isWindowRef == null) {
+                    isWindowRef = windowRef;
+ 
+                    setTimeout(function() {
+                        try {
+                            // Custom Scheme 이 실행되지 않고 잘못된 페이지가 노출된 상태에서
+                            // 아래의 코드 실행 시 Security Error 발생
+                            windowRef.location == 'undefind';
+ 
+                            // Custom Scheme 이 실행되었다면 앱 종료 후 해당 tab 을 닫는다.
+                            windowRef.close();
+ 
+                        } catch (e) {
+                            windowRef.location.href = redirectUrl;
+                        }
+                    }, time);
+                    return true;
+                }
+            }
+        })();
+ 
+        function runApp() {
+ 
+//            Check Chrome for Android Version is V25
+//            https://developer.chrome.com/multidevice/android/intents - Android Chrome Version
+//            http://en.wikipedia.org/wiki/Google_Chrome_for_Android - Chrome WebKit Version
+            if (parseFloat(navigator.userAgent.match(/WebKit\/[^\ ]*/)[0].toLowerCase().substr(7)) > 537.22){
+                var openWindow = window.open('./openWindow.html#' + schemeUrl);
+ 
+            } else {
+                $('<iframe></iframe>', {
+                    src: schemeUrl,
+                    width: 0,
+                    height: 0,
+                    id: 'checkframe'
+                }).css('border', '0').appendTo('body');
+ 
+                setTimeout(function() {
+                    if($("#checkframe").contents().find("body").html() == undefined){
+                        window.location.href = redirectUrl;
+                    }
+                }, 1000);
+            }
+        }
           };
           function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocation").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); };
 
