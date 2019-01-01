@@ -147,7 +147,7 @@
           <div class="col-lg-8 mx-auto">
             <h2>오시는길</h2>
           </div>
-          <div id="map" style="width:90vw;height:300px;margin:auto;background-color:coral;"></div>
+          <div id="map" style="width:100vw;height:300px;margin:auto;background-color:coral;"></div>
           <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
@@ -187,7 +187,8 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 });    
 </script>
         </div>
-        <button id="getLocationD">바로 길찾기!(카카오맵)</button>
+        <div class="btn-group">
+        <button id="getLocationD" class="button">바로<br>길찾기!<br>(카카오맵)</button>
         <script>
           function successCallbackD(position) { 
              let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
@@ -260,7 +261,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
           function errorCallbackD(error) { alert("Error: " + error.message); } document.getElementById("getLocationD").onclick = function () { navigator.geolocation.getCurrentPosition(successCallbackD, errorCallbackD); };
 
         </script>
-              <button id="getLocationN">바로 길찾기!(네이버맵)</button>
+              <button id="getLocationN" class="button">바로<br>길찾기!<br>(네이버맵)</button>
         <script>
           function successCallbackN(position) { 
              let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
@@ -334,7 +335,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 
         </script>  
         </script>
-              <button id="getLocationT">바로 내비게이션!(티맵)</button>
+              <button id="getLocationT" class="button">바로<br>내비게이션!<br>(티맵)</button>
         <script>
           function successCallbackT(position) { 
              let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
@@ -408,7 +409,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
           function errorCallbackT(error) { alert("Error: " + error.message); } document.getElementById("getLocationT").onclick = function () { navigator.geolocation.getCurrentPosition(successCallbackT, errorCallbackT); };
 
         </script> 
-      <button id="getLocationK" onclick="navi();">바로 내비게이션!(카카오내비)</button>
+      <button id="getLocationK" onclick="navi();" class="button">바로<br>내비게이션!<br>(카카오내비)</button>
         <script>
           Kakao.init('147f86139273df9a3d4a489f3d06892c');
     // 카카오 로그인 버튼을 생성합니다.
@@ -420,7 +421,8 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
             coordType: 'wgs84'
         });
     }
-        </script> 
+        </script>
+        </div> 
       </div>
     </section>
 

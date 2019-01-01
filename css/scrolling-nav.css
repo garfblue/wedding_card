@@ -103,9 +103,9 @@ h2, .h2{
 .slide-image {
 	position:relative;
 	height:inherit;
-	width:100%;
+	width:100vw;
 	background-size:cover;
-	background-position0% 50%;
+	background-position:50% 50%;
 	background-color:#FFF;
 	-webkit-transform: translateZ(0);
 
@@ -144,4 +144,25 @@ h2, .h2{
   font-size: 85%;
 }
 
+.btn-group .button {
+  background-color: #333333; /* Green */
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: bold;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  
+}
+
+.btn-group .button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #AAAAAA;
+}
 
