@@ -186,7 +186,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 });    
 </script>
         </div>
-        <button id="getLocation">바로 길찾기!(카카오맵)</button>
+        <button id="getLocationD">바로 길찾기!(카카오맵)</button>
         <script>
           function successCallback(position) { 
              let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
@@ -256,15 +256,15 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 
     }
           };
-          function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocation").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); };
+          function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocationD").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); };
 
         </script>
-              <button id="getLocation">바로 길찾기!(네이버맵)</button>
+              <button id="getLocationN">바로 길찾기!(네이버맵)</button>
         <script>
           function successCallback(position) { 
              let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
              //alert("Your current position is: latitude(" + pos.lat + "), longitude(" + pos.lng + ")"); 
-             var schemeUrl = "nmap://route/public?option=24&slat=" +pos.lat+ "&slng="+pos.lng+"&dlat=37.561808&dlng=127.056695&dname=서울메트로웨딩&appname=handeeanddidymuswedding.ml";
+             var schemeUrl = "nmap://route/public?option=24&slat=" +pos.lat+ "&slng="+pos.lng+"&sname=현재위치&dlat=37.561808&dlng=127.056695&dname=서울메트로웨딩&appname=handeeanddidymuswedding.ml";
         var redirectUrl = 'http://www.kakao.com/';
 
         //alert(schemeUrl); 
@@ -329,7 +329,7 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 
     }
           };
-          function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocation").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); };
+          function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocationN").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); };
 
         </script>  
       </div>
