@@ -186,7 +186,16 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
 });    
 </script>
         </div>
-        <button a href="http://map.daum.net/link/to/메트로웨딩,37.561808,127.056695">바로 길찾기!</button>
+        <button id="getLocation">바로 길찾기!</button>
+        <script>
+          function successCallback(position) { 
+             let pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+             alert("Your current position is: latitude(" + pos.lat + "), longitude(" + pos.lng + ")"); 
+             window.open("http://map.daum.net/link/to/서울메트로웨딩,37.561808,127.056695", "_blank");
+          } 
+          function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocation").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); }; }());
+
+        </script>
         
       </div>
     </section>
