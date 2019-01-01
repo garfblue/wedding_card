@@ -197,38 +197,58 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
         alert(schemeUrl); 
              
 
-        //setTimeout(runApp, 700);
-        location.href = schemeUrl;
+        var currentOS = "else";
 
- 
-        function runApp() {
- 
-//            Check Chrome for Android Version is V25
-//            https://developer.chrome.com/multidevice/android/intents - Android Chrome Version
-//            http://en.wikipedia.org/wiki/Google_Chrome_for_Android - Chrome WebKit Version
-            if (parseFloat(navigator.userAgent.match(/WebKit\/[^\ ]*/)[0].toLowerCase().substr(7)) > 537.22){
-                var openWindow = window.open('./openWindow.html#' + schemeUrl);
- 
-            } else if (navigator.userAgent.match(/iphone|ipad\/[^\ ]*/)) {
-             
-              window.location.href = schemeUrl;
 
-            }
-             else {
-                $('<iframe></iframe>', {
-                    src: schemeUrl,
-                    width: 0,
-                    height: 0,
-                    id: 'checkframe'
-                }).css('border', '0').appendTo('body');
- 
-                setTimeout(function() {
-                    if($("#checkframe").contents().find("body").html() == undefined){
-                        window.location.href = redirectUrl;
-                    }
-                }, 1000);
-            }
-        }
+    var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+
+
+    if (mobile) {
+
+
+        var userAgent = navigator.userAgent.toLowerCase();
+
+
+        if (userAgent.search("android") > -1)
+
+
+            currentOS = "android";
+
+
+        else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1))
+
+
+            currentOS = "ios";
+
+
+        else
+
+
+            currentOS = "else";
+
+
+    }
+
+
+    if(currentOS == "android"){
+
+
+        // Android
+
+
+        window.open("intent://www.naver.com#Intent;scheme=http;package=com.android.chrome;end");
+
+
+    }else if(currentOS == "ios"){
+
+
+        // IOS 
+
+
+        window.open(schemeUrl);
+
+
+    }
           };
           function errorCallback(error) { alert("Error: " + error.message); } document.getElementById("getLocation").onclick = function () { navigator.geolocation.getCurrentPosition(successCallback, errorCallback); };
 
