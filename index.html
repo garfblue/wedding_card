@@ -194,37 +194,9 @@ geocoder.addressSearch('서울 성동구 천호대로78길 15-48', function(resu
              var schemeUrl = "daummaps://route?sp="+pos.lat+","+pos.lng+"&ep=37.561808,127.056695by=PUBLICTRANSIT";
         var redirectUrl = 'http://www.kakao.com/';
 
-        setTimeout(runApp, 700);
- 
-        window.closeWindow = (function(){
-            var isWindowRef = null;
-            setInterval(function() {
-                // 새로열린 창이 닫혔을 때 다시 버튼 클릭 시 동작이 실행이 되어야 하므로 해당 객체를 삭제
-                isWindowRef = (isWindowRef && isWindowRef.window) ? isWindowRef : null;
-            }, 1000);
- 
-            return function (windowRef, time) {
-                //  새로열린 Window에서 백버튼 누를 시 해당 함수가 계속 호출되는 무한루프 방지
-                if (isWindowRef == null) {
-                    isWindowRef = windowRef;
- 
-                    setTimeout(function() {
-                        try {
-                            // Custom Scheme 이 실행되지 않고 잘못된 페이지가 노출된 상태에서
-                            // 아래의 코드 실행 시 Security Error 발생
-                            windowRef.location == 'undefind';
- 
-                            // Custom Scheme 이 실행되었다면 앱 종료 후 해당 tab 을 닫는다.
-                            windowRef.close();
- 
-                        } catch (e) {
-                            windowRef.location.href = redirectUrl;
-                        }
-                    }, time);
-                    return true;
-                }
-            }
-        })();
+        //setTimeout(runApp, 700);
+        location.href = schemeUrl;
+
  
         function runApp() {
  
